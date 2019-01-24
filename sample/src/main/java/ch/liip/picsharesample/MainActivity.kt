@@ -52,7 +52,7 @@ class MainActivity : Activity() {
 
     class InlayCustomProvider(viewResourceId: Int) : InlayViewProvider(viewResourceId) {
 
-        val date: Date = Date()
+        private val date: Date = Date()
 
         override fun populate(view: View) {
             view.textViewDemo.text = "$date"
