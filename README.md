@@ -50,6 +50,11 @@ class InlayCustomProvider(viewResourceId: Int) : InlayViewProvider(viewResourceI
 **To run:** simply call the `startSharing` function with the desired options
 
 ```kotlin
+// Import the library
+import ch.liip.picshare.sharing.sharing.options.CropOptions
+import ch.liip.picshare.sharing.sharing.options.PreviewOptions
+import ch.liip.picshare.sharing.startSharing
+
 // Create options for crop
 val cropOptions = CropOptions()
                     .setFixedSize(1024, 1024)
@@ -59,7 +64,7 @@ val cropOptions = CropOptions()
 val inlayOptions = InlayOptions(InlayViewProvider(R.layout.inlay))
 
 // Create options for preview
-previewOptions = PreviewOptions()
+val previewOptions = PreviewOptions()
                     .setTitle(resources.getString(R.string.picshare_app_title))
 
 // Start the sharing with the given context (Usually 'this' to pass the current Activity context.)
